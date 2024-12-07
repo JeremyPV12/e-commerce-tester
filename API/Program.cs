@@ -18,6 +18,8 @@ builder.Services.AddDbContext<StoreContext>(opt => {
 
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+/* If we don't knoe what type will be, we need put type of interface  */
+builder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
 
 var app = builder.Build();
 
