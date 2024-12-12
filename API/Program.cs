@@ -42,7 +42,7 @@ app.UseMiddleware<ExceptionMiddleware>();
 app.MapControllers();
 
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod()
-    .WithOrigins("http://localhost:4200", "https://localhost:4200"));
+    .WithOrigins("http://localhost:4200", "https://localhost:4200","https://tester-homework.web.app/"));
 
 try
 {
